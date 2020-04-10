@@ -1,0 +1,52 @@
+{
+  "name": "points-tracker",
+  "version": "1.0.0",
+  "description": "Track airline miles, gauge their value and when to use them, and search for flight deals",
+  "main": "index.ts",
+  "scripts": {
+    "build": "webpack --mode production",
+    "bundle": "webpack",
+    "check-types": "tsc",
+    "lint": "eslint . --ext .ts",
+    "start": "webpack-dev-server --mode development --open --hot",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chadvincente/points-tracker.git"
+  },
+  "author": "chadvincente",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chadvincente/points-tracker/issues"
+  },
+  "homepage": "https://github.com/chadvincente/points-tracker#readme",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.5",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "@babel/preset-typescript": "^7.9.0",
+    "@types/react": "^16.9.33",
+    "@types/react-dom": "^16.9.6",
+    "@types/styled-components": "^5.0.1",
+    "@typescript-eslint/parser": "^2.27.0",
+    "@typescript-eslint/eslint-plugin": "^2.27.0",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.5.1",
+    "eslint": "^6.8.0",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.2.0",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.42.1",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.0",
+    "typescript": "^3.8.3"
+  }
+}
