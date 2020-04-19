@@ -1,0 +1,53 @@
+service: points-tracker
+
+provider:
+  name: aws
+  region: us-east-2
+  stage: ${opt:stage, 'dev'}
+
+plugins:
+  - serverless-dotenv-plugin
+  - serverless-localstack
+
+custom:
+  localstack:
+    docker:
+      sudo: false
+    host: http://localhost
+    lambda:
+      mountCode: true
+    stages:
+      - local
+
+resources:
+  Resources:
+    memberships:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: Memberships
+        AttributeDefinitions:
+          - AttributeName: userId
+            AttributeType: 'S'
+        KeySchema:
+          - AttributeName: userId
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+    snapshots:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: Snapshots
+        AttributeDefinitions:
+          - AttributeName: timestamp
+            AttributeType: 'N'
+          - AttributeName: userId
+            AttributeType: 'S'
+        KeySchema:
+          - AttributeName: userId
+            KeyType: HASH
+          - AttributeName: timestamp
+            KeyType: RANGE
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
