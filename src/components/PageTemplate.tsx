@@ -26,6 +26,7 @@ interface StickyProps {
 }
 
 const Sticky = styled.div<StickyProps>`
+  border-bottom: 1px solid #d3d3d3;
   display: flex;
   ${props => props["data-isSticky"] &&
     css`

@@ -1,8 +1,5 @@
 export interface Membership {
-  lastUpdated: Date;
-  points: number;
   program: string;
-  userEmail: string;
+  status?: string;
   userId: string;
-  userName: string;
 }

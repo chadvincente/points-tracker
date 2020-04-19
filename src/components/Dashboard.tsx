@@ -31,7 +31,7 @@ const ProgramDetails = styled.div`
 `;
 
 const ProgramLogo = styled.img`
-  max-width: 180px;
+  max-width: 100px;
 `;
 
 const ProgramName = styled.div`
@@ -53,8 +53,9 @@ const ProgramText = styled.div`
 const PointsDetails = styled.div`
   align-items: center;
   display: flex;
-  font-size: 100px;
+  font-size: 90px;
   justify-content: center;
+  width: 400px;
 `;
 
 const Actions = styled.div`
@@ -76,7 +77,7 @@ const Dashboard: React.FC<DashboardProps> = ({memberships, programs}) => {
               <ProgramLogo src={`src/assets/programs/${p.logo}.png`} />
             </ProgramDetails>
             <PointsDetails>
-              {m.points}
+              {}
             </PointsDetails>
             <Actions>
 
