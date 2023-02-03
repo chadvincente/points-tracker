@@ -41,7 +41,7 @@
     "eslint": "^6.8.0",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.2.0",
-    "serverless": "^1.67.3",
+    "serverless": "^3.27.0",
     "serverless-dotenv-plugin": "^2.4.2",
     "serverless-localstack": "^0.4.24",
     "style-loader": "^1.1.3",
